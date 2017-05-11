@@ -230,10 +230,10 @@ class ABB {
 			return true;
 		}
 
-		if((node.getEsquerda()!=null)&&(node.getEsquerda().getChave()>node.getChave()))
+		if((node.getEsquerda()!=null)&&(node.getEsquerda().getChave() > node.getChave()))
 			return false;
 
-		if((node.getDireita()!=null)&&(node.getDireita().getChave()<node.getChave()))
+		if((node.getDireita()!=null)&&(node.getDireita().getChave() < node.getChave()))
 			return false;
 		
 		boolean a = true;
@@ -257,7 +257,7 @@ class ABB {
 		int esq = altura(no.getEsquerda());
 		int dir = altura (no.getDireita());
 		
-		if(esq>dir)
+		if(esq > dir)
 			return esq+1;
 		else
 			return dir+1;
@@ -267,8 +267,8 @@ class ABB {
 	int quantidadeDeNosDadoAltura(int altura){
 		int resultado = 0;
 		
-		for(int i=0; i<=altura; i++){
-			resultado+=Math.pow(2, i);
+		for(int i=0; i <= altura; i++){
+			resultado += Math.pow(2, i);
 		}
 		
 		return resultado;
